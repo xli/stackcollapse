@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+try:
+    import stackcollapse
+except ImportError:
+    import sys
+    import os
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+    import stackcollapse
+
+import fileinput
+import json
+
+log = map(json.loads, fileinput.input())
+for line in stackcollapse.flame(log):
+    print line

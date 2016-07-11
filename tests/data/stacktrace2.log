@@ -1,0 +1,15 @@
+IOLoop blocked in
+  File "/usr/local/bin/helloworld-tornado", line 9, in <module>
+    load_entry_point('helloworld', 'console_scripts', 'helloworld-tornado')()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/gen.py", line 267, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/root/helloworld/helloworld/helloworld.py", line 70, in ioloop_start
+    ioloop_inst.start()
+  File "/usr/local/lib/python2.7/dist-packages/tornado/ioloop.py", line 827, in start
+    self._run_callback(callback)
+  File "/usr/local/lib/python2.7/dist-packages/tornado/gen.py", line 1097, in <lambda>
+    self.future, lambda f: self.run())
+  File "/home/root/helloworld/helloworld/services/mappers/__init__.py", line 105, in _to_epoch
+    return epoch_sec
+  File "/python2.7/dateutil/parser.py", line 911, in parse
+    return ret
